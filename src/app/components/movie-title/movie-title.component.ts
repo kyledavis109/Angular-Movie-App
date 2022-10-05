@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { TitleService } from 'src/app/services/title.service';
 
 @Component({
-  selector: 'app-movie-image',
-  templateUrl: './movie-image.component.html',
-  styleUrls: ['./movie-image.component.css']
+  selector: 'app-movie-title',
+  templateUrl: './movie-title.component.html',
+  styleUrls: ['./movie-title.component.css']
 })
-export class MovieImageComponent implements OnInit {
+export class MovieTitleComponent implements OnInit {
   movieTitle: any;
 
   constructor(private get: TitleService) { }
@@ -14,5 +14,5 @@ export class MovieImageComponent implements OnInit {
   ngOnInit(): void {
     this.get.showTitle().subscribe((value) => (this.movieTitle = value))
   }
-
+  
 }

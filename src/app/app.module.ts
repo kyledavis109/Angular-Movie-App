@@ -3,12 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { MovieImageComponent } from './components/movie-image/movie-image.component';
+import { MovieTitleComponent } from './components/movie-title/movie-title.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MovieImageComponent
+    MovieTitleComponent
   ],
   imports: [
     BrowserModule,
