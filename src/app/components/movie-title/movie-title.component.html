@@ -1,4 +1,5 @@
 <div class="movieContainer" *ngFor="let image of images">
-    <!-- <p>{{ movieTitle }}</p> -->
+    <!-- <p *ngFor="let title of titles">{{ title.title }}</p> -->
     <img src="{{ movieImageUrl + image.poster_path }}">
 </div>
+<a routerLink="''">Home</a>

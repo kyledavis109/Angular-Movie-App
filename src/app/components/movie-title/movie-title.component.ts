@@ -17,20 +17,26 @@ export class MovieTitleComponent implements OnInit {
   // noImageFound: any;
   // images: Array<{value: string}> = [];
   images: any = [];
+  titles: any = [];
   noData: any;
   // results = [];
 
   constructor(private get: TitleService) { }
 
   getImages() {
-    this.get.getImage().subscribe((value) => (this.movieImage = this.movieImageUrl + value));
-    this.get.getImage().subscribe((res) => {
-      this.images = res
+    this.get.getImages().subscribe((results) => {
+      this.images = results;
+    })
+  }
+
+  getTitles() {
+    this.get.getTitles().subscribe((results) => {
+      this.titles = results;
     })
   }
 
   ngOnInit(): void {
-    this.get.getTitle().subscribe((value) => (this.movieTitle = value));
+    this.getTitles()
     this.getImages()
   }
   

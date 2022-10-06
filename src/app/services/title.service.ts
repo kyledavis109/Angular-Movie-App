@@ -9,11 +9,11 @@ export class TitleService {
 
   constructor(private http: HttpClient) { }
 
-  getTitle() {
-    return this.http.get('http://localhost:5000/title');
+  getTitles() {
+    return this.http.get('http://localhost:5000/titles');
   }
 
-  getImage() {
-    return this.http.get('http://localhost:5000/image');
+  getImages() {
+    return this.http.get('http://localhost:5000/images');
   }
 }
