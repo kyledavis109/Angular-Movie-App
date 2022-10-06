@@ -1,4 +1,4 @@
-<div class="movieContainer">
-    <p>{{ movieTitle }}</p>
-    <img src="{{ movieImage }}">
+<div class="movieContainer" *ngFor="let image of images">
+    <!-- <p>{{ movieTitle }}</p> -->
+    <img src="{{ movieImageUrl + image.poster_path }}">
 </div>
