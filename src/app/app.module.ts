@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { TopWeekComponent } from './pages/top-week/top-week.component';
 import { TopDayComponent } from './pages/top-day/top-day.component';
+import { ButtonComponent } from './components/button/button.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 // Page routes.
 const appRoutes: Routes = [
@@ -23,7 +25,9 @@ const appRoutes: Routes = [
     AppComponent,
     HomeComponent,
     TopWeekComponent,
-    TopDayComponent
+    TopDayComponent,
+    ButtonComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

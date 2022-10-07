@@ -1,6 +1,10 @@
+<a routerLink="''">Home</a>
+<br>
+<a routerLink="/topWeek">Top Movies Of The Week</a>
+<br>
+<h1>Top Movies Today</h1>
+<br>
 <div class="movieContainer" *ngFor="let image of images">
     <!-- <p *ngFor="let title of titles">{{ title.title }}</p> -->
     <img src="{{ movieImageUrl + image.poster_path }}">
 </div>
-<a routerLink="''">Home</a>
-<a routerLink="/topWeek">Top Movies Of The Week</a>
