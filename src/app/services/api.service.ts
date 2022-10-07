@@ -15,7 +15,7 @@ export class ApiService {
 
   // API call to backend to retrieve top TV shows of the day's poster images.
   getTopTvTodayImages() {
-    return this.http.get('http://localhost:5000/dayImages');
+    return this.http.get('http://localhost:5000/topTvTodayImages');
   }
 
   // API call to backend to retrieve top movies of the day's poster images.

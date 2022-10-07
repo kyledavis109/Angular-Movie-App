@@ -1,1 +1,6 @@
-<p>top-tv-today works!</p>
+<h1>Top Movies Today</h1>
+<br>
+<div class="movieContainer" *ngFor="let image of images">
+    <!-- <p *ngFor="let title of titles">{{ title.title }}</p> -->
+    <img src="{{ movieImageUrl + image.poster_path }}">
+</div>

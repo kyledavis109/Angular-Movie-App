@@ -14,6 +14,7 @@ import { HeaderComponent } from './components/header/header.component';
 // Page routes.
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'topTvToday', component: TopTvTodayComponent },
   { path: 'topMoviesToday', component: TopMoviesTodayComponent },
   // { path: 'topWeek', component: TopWeekComponent },
 
