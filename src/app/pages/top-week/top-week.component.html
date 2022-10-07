@@ -1,0 +1,6 @@
+<div class="movieContainer" *ngFor="let image of images">
+    <!-- <p *ngFor="let title of titles">{{ title.title }}</p> -->
+    <img src="{{ movieImageUrl + image.poster_path }}">
+</div>
+<a routerLink="''">Home</a>
+<a routerLink="/topDay">Top Movies Today</a>

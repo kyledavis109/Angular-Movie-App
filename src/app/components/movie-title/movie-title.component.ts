@@ -24,7 +24,7 @@ export class MovieTitleComponent implements OnInit {
   constructor(private get: TitleService) { }
 
   getImages() {
-    this.get.getImages().subscribe((results) => {
+    this.get.getWeekImages().subscribe((results) => {
       this.images = results;
     })
   }

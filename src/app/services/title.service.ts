@@ -13,7 +13,13 @@ export class TitleService {
     return this.http.get('http://localhost:5000/titles');
   }
 
-  getImages() {
-    return this.http.get('http://localhost:5000/images');
+  // API call to backend to retrieve top movies of the day images.
+  getDayImages() {
+    return this.http.get('http://localhost:5000/dayImages');
+  }
+
+  // API call to backend to retrieve top movies of the week images.
+  getWeekImages() {
+    return this.http.get('http://localhost:5000/weekImages');
   }
 }

@@ -6,11 +6,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { MovieTitleComponent } from './components/movie-title/movie-title.component';
 import { HomeComponent } from './pages/home/home.component';
+import { TopWeekComponent } from './pages/top-week/top-week.component';
+import { TopDayComponent } from './pages/top-day/top-day.component';
 
+// Page routes.
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'images', component: MovieTitleComponent },
-  // { path: 'register', component: RegisterComponent },
+  { path: 'topDay', component: TopDayComponent },
+  { path: 'topWeek', component: TopWeekComponent },
 
   // otherwise redirect to home
   { path: '**', redirectTo: '' }
@@ -20,7 +23,9 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     MovieTitleComponent,
-    HomeComponent
+    HomeComponent,
+    TopWeekComponent,
+    TopDayComponent
   ],
   imports: [
     BrowserModule,
