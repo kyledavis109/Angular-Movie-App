@@ -5,16 +5,17 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
-import { TopWeekComponent } from './pages/top-week/top-week.component';
-import { TopDayComponent } from './pages/top-day/top-day.component';
 import { ButtonComponent } from './components/button/button.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { TopTvTodayComponent } from './pages/top-tv-today/top-tv-today.component';
+import { TopMoviesTodayComponent } from './pages/top-movies-today/top-movies-today.component';
+import { HeaderComponent } from './components/header/header.component';
 
 // Page routes.
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'topDay', component: TopDayComponent },
-  { path: 'topWeek', component: TopWeekComponent },
+  { path: 'topMoviesToday', component: TopMoviesTodayComponent },
+  // { path: 'topWeek', component: TopWeekComponent },
 
   // Otherwise redirect to home page.
   { path: '**', redirectTo: '' }
@@ -24,10 +25,11 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    TopWeekComponent,
-    TopDayComponent,
     ButtonComponent,
-    FooterComponent
+    FooterComponent,
+    TopTvTodayComponent,
+    TopMoviesTodayComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

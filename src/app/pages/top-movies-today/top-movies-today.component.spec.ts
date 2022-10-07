@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TopWeekComponent } from './top-week.component';
+import { TopMoviesTodayComponent } from './top-movies-today.component';
 
-describe('TopWeekComponent', () => {
-  let component: TopWeekComponent;
-  let fixture: ComponentFixture<TopWeekComponent>;
+describe('TopMoviesTodayComponent', () => {
+  let component: TopMoviesTodayComponent;
+  let fixture: ComponentFixture<TopMoviesTodayComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TopWeekComponent ]
+      declarations: [ TopMoviesTodayComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TopWeekComponent);
+    fixture = TestBed.createComponent(TopMoviesTodayComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

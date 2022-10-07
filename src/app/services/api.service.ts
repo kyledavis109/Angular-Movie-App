@@ -13,13 +13,14 @@ export class ApiService {
   //   return this.http.get('http://localhost:5000/titles');
   // }
 
-  // API call to backend to retrieve top movies of the day images.
-  getDayImages() {
+  // API call to backend to retrieve top TV shows of the day's poster images.
+  getTopTvTodayImages() {
     return this.http.get('http://localhost:5000/dayImages');
   }
 
-  // API call to backend to retrieve top movies of the week images.
-  getWeekImages() {
-    return this.http.get('http://localhost:5000/weekImages');
+  // API call to backend to retrieve top movies of the day's poster images.
+  getTopMoviesTodayImages() {
+    return this.http.get('http://localhost:5000/topMoviesTodayImages');
   }
+  
 }
