@@ -4,7 +4,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { MovieTitleComponent } from './components/movie-title/movie-title.component';
 import { HomeComponent } from './pages/home/home.component';
 import { TopWeekComponent } from './pages/top-week/top-week.component';
 import { TopDayComponent } from './pages/top-day/top-day.component';
@@ -15,14 +14,13 @@ const appRoutes: Routes = [
   { path: 'topDay', component: TopDayComponent },
   { path: 'topWeek', component: TopWeekComponent },
 
-  // otherwise redirect to home
+  // Otherwise redirect to home page.
   { path: '**', redirectTo: '' }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    MovieTitleComponent,
     HomeComponent,
     TopWeekComponent,
     TopDayComponent

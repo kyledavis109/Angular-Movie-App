@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TitleService } from 'src/app/services/title.service';
+import { ApiService } from 'src/app/services/title.service';
 
 @Component({
   selector: 'app-top-day',
@@ -10,7 +10,7 @@ export class TopDayComponent implements OnInit {
   movieImageUrl: string = 'https://image.tmdb.org/t/p/w200';
   images: any = [];
 
-  constructor(private get: TitleService) { }
+  constructor(private get: ApiService) { }
 
   getDayImages() {
     this.get.getWeekImages().subscribe((results) => {

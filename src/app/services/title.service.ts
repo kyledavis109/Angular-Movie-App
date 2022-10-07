@@ -5,13 +5,13 @@ import { Observable, Subject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class TitleService {
+export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  getTitles() {
-    return this.http.get('http://localhost:5000/titles');
-  }
+  // getTitles() {
+  //   return this.http.get('http://localhost:5000/titles');
+  // }
 
   // API call to backend to retrieve top movies of the day images.
   getDayImages() {
