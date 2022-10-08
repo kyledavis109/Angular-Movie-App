@@ -1,0 +1,61 @@
+<form *ngIf="showEmailForm" class="add-form" [formGroup]="infoForm" (ngSubmit)="sendMail()" #form="ngForm">
+    <div class="form-control">
+      <label for="text">Recipient</label>
+      <input
+        formControlName="emailAddress"
+        type="text"
+        name="recipient"
+        id="recipient"
+        placeholder="Add Recipient"
+        formControlName="emailAddress"
+        required
+      />
+      <div *ngIf="emailAddress.invalid && (emailAddress.dirty || emailAddress.touched)" class="alert alert-danger p-1">
+        <p *ngIf="emailAddress.errors?.['required']" class="error">
+          Email address is required.
+        </p>
+        <!-- <p *ngIf="emailAddress.errors?.['minlength']" class="mb-0">
+          Email must be at least 3 characters long.
+        </p> -->
+      </div>
+    </div>
+    <div class="form-control">
+      <label for="subject">Subject</label>
+      <input
+        type="text"
+        name="subject"
+        id="subject"
+        placeholder="Specify Message Subject"
+        formControlName="emailSubject"
+        required
+      />
+      <div *ngIf="emailSubject.invalid && (emailSubject.dirty || emailSubject.touched)" class="alert alert-danger p-1">
+        <p *ngIf="emailSubject.errors?.['required']" class="error">
+          Email message subject is required.
+        </p>
+        <!-- <p *ngIf="emailSubject.errors?.['email']" class="mb-0">
+          Email is incorrect.
+        </p> -->
+      </div>
+    </div>
+    <div class="form-control">
+      <label for="message">Message</label>
+      <input
+        type="text"
+        name="message"
+        id="message"
+        placeholder="Write Message"
+        formControlName="emailMessage"
+        required
+      />
+      <div *ngIf="emailMessage.invalid && (emailMessage.dirty || emailMessage.touched)" class="alert alert-danger p-1">
+        <p *ngIf="emailMessage.errors?.['required']" class="error">
+          Email message is required.
+        </p>
+         <!-- <p *ngIf="emailAddress.errors?.['minlength']" class="mb-0">
+          Email must be at least 3 characters long.
+        </p> -->
+      </div>
+    </div>
+    <input type="submit" value="Send" class="btn btn-block" [disabled]="form.invalid" />
+  </form>

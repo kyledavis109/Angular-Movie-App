@@ -13,11 +13,11 @@ export class GetImagesComponent implements OnInit {
   topTvToday: string = 'Top TV Shows Today';
   topMoviesToday: string = 'Top Movies Today';
 
-  constructor(private get: ApiService, private router: Router) { }
+  constructor(private getTopImages: ApiService, private router: Router) { }
 
   // Interacts with ApiService to retrieve top movies of the day's poster images.
   getImages() {
-    this.get.getTopMoviesTodayImages().subscribe((results) => {
+    this.getTopImages.getTopMoviesTodayImages().subscribe((results) => {
       this.images = results;
     })
   }
