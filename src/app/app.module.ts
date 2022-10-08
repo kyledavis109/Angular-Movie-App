@@ -10,6 +10,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { TopTvTodayComponent } from './pages/top-tv-today/top-tv-today.component';
 import { TopMoviesTodayComponent } from './pages/top-movies-today/top-movies-today.component';
 import { HeaderComponent } from './components/header/header.component';
+import { GetImagesComponent } from './components/get-images/get-images.component';
 
 // Page routes.
 const appRoutes: Routes = [
@@ -30,7 +31,8 @@ const appRoutes: Routes = [
     FooterComponent,
     TopTvTodayComponent,
     TopMoviesTodayComponent,
-    HeaderComponent
+    HeaderComponent,
+    GetImagesComponent
   ],
   imports: [
     BrowserModule,
