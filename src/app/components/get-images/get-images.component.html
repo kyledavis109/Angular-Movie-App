@@ -1,5 +1,11 @@
-<h1 *ngIf="hasRoute('/topTvToday')">{{ topTvToday }}</h1>
-<h1 *ngIf="hasRoute('/topMoviesToday')">{{ topMoviesToday}}</h1>
+<div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h3 class="animate-charcter" *ngIf="hasRoute('/topTvToday')">{{ topTvToday }}</h3>
+        <h3 class="animate-charcter" *ngIf="hasRoute('/topMoviesToday')">{{ topMoviesToday}}</h3>
+      </div>
+    </div>
+  </div>
 <br>
 <div class="movieContainer" *ngFor="let image of images">
     <!-- <p *ngFor="let title of titles">{{ title.title }}</p> -->
