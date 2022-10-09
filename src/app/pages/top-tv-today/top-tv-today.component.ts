@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./top-tv-today.component.css']
 })
 export class TopTvTodayComponent implements OnInit {
+  topTvToday: string = 'Top TV Shows Today';
 
   constructor() { }
 

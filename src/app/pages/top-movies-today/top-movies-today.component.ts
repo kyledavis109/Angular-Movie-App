@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./top-movies-today.component.css']
 })
 export class TopMoviesTodayComponent implements OnInit {
+  topMoviesToday: string = 'Top Movies Today';
 
   constructor() { }
 

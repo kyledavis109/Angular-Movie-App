@@ -11,8 +11,8 @@ export class GetImagesComponent implements OnInit {
   imageUrl: string = 'https://image.tmdb.org/t/p/w154';
   movieImages: any = [];
   tvImages: any = [];
-  topTvToday: string = 'Top TV Shows Today';
-  topMoviesToday: string = 'Top Movies Today';
+  // topTvToday: string = 'Top TV Shows Today';
+  // topMoviesToday: string = 'Top Movies Today';
 
   constructor(private getTopImages: ApiService, private router: Router) { }
 
