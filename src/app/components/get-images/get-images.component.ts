@@ -15,8 +15,15 @@ export class GetImagesComponent implements OnInit {
 
   constructor(private getTopImages: ApiService, private router: Router) { }
 
+  // Interacts with ApiService to retrieve top TV shows of the day's poster images.
+  getTvImages() {
+    this.getTopImages.getTopTvTodayImages().subscribe((results) => {
+      this.images = results;
+    })
+  }
+
   // Interacts with ApiService to retrieve top movies of the day's poster images.
-  getImages() {
+  getMovieImages() {
     this.getTopImages.getTopMoviesTodayImages().subscribe((results) => {
       this.images = results;
     })
@@ -27,7 +34,8 @@ export class GetImagesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getImages();
+    this.getMovieImages();
+    this.getTvImages();
   }
 
 }

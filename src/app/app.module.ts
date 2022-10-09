@@ -13,6 +13,7 @@ import { TopMoviesTodayComponent } from './pages/top-movies-today/top-movies-tod
 import { HeaderComponent } from './components/header/header.component';
 import { GetImagesComponent } from './components/get-images/get-images.component';
 import { EmailComponent } from './components/email/email.component';
+import { GetTitlesComponent } from './components/get-titles/get-titles.component';
 
 // Page routes.
 const appRoutes: Routes = [
@@ -35,7 +36,8 @@ const appRoutes: Routes = [
     TopMoviesTodayComponent,
     HeaderComponent,
     GetImagesComponent,
-    EmailComponent
+    EmailComponent,
+    GetTitlesComponent
   ],
   imports: [
     BrowserModule,

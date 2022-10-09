@@ -10,9 +10,15 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  // getTitles() {
-  //   return this.http.get('http://localhost:5000/titles');
-  // }
+  // API call to backend to retrieve top TV shows of the day's titles.
+  getTopTvTodayTitles() {
+    return this.http.get('http://localhost:5000/topTvTodayTitles');
+  }
+
+  // API call to backend to retrieve top movies of the day's titles.
+  getTopMoviesTodayTitles() {
+    return this.http.get('http://localhost:5000/topMoviesTodayTitles');
+  }
 
   // API call to backend to retrieve top TV shows of the day's poster images.
   getTopTvTodayImages() {
