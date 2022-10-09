@@ -8,8 +8,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./get-images.component.css']
 })
 export class GetImagesComponent implements OnInit {
-  movieImageUrl: string = 'https://image.tmdb.org/t/p/w200';
-  images: any = [];
+  imageUrl: string = 'https://image.tmdb.org/t/p/w154';
+  movieImages: any = [];
+  tvImages: any = [];
   topTvToday: string = 'Top TV Shows Today';
   topMoviesToday: string = 'Top Movies Today';
 
@@ -18,14 +19,14 @@ export class GetImagesComponent implements OnInit {
   // Interacts with ApiService to retrieve top TV shows of the day's poster images.
   getTvImages() {
     this.getTopImages.getTopTvTodayImages().subscribe((results) => {
-      this.images = results;
+      this.tvImages = results;
     })
   }
 
   // Interacts with ApiService to retrieve top movies of the day's poster images.
   getMovieImages() {
     this.getTopImages.getTopMoviesTodayImages().subscribe((results) => {
-      this.images = results;
+      this.movieImages = results;
     })
   }
 

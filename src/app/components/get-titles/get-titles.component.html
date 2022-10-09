@@ -1,1 +1,19 @@
-<p>{{ title }}</p>
+<div class="titleContainer" *ngFor="let title of tvTitles">
+
+    <ng-template>
+        
+        <p>{{ title }}</p>
+
+    </ng-template>
+
+</div>
+
+<div class="titleContainer" *ngFor="let title of movieTitles">
+
+    <ng-template>
+        
+        <p>{{ title }}</p>
+
+    </ng-template>
+
+</div>

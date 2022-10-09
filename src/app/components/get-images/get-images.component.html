@@ -7,6 +7,23 @@
     </div>
   </div>
 <br>
-<div class="movieContainer" *ngFor="let image of images">
-    <img src="{{ movieImageUrl + image.poster_path }}">
+
+<div class="imageContainer" *ngFor="let image of tvImages">
+
+  <ng-template [ngIf]="hasRoute('/topTvToday')">
+
+    <img src="{{ imageUrl + image.poster_path }}">
+
+  </ng-template>
+
+</div>
+
+<div class="imageContainer" *ngFor="let image of movieImages">
+
+  <ng-template [ngIf]="hasRoute('/topMoviesToday')">
+
+    <img src="{{ imageUrl + image.poster_path }}">
+
+  </ng-template>
+  
 </div>

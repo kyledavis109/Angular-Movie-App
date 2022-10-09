@@ -20,7 +20,6 @@ const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'topTvToday', component: TopTvTodayComponent },
   { path: 'topMoviesToday', component: TopMoviesTodayComponent },
-  // { path: 'topWeek', component: TopWeekComponent },
 
   // Otherwise redirect to home page.
   { path: '**', redirectTo: '' }

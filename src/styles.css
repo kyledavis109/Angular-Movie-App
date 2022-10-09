@@ -15,15 +15,14 @@ body {
     margin:0;
 }
 
-.movieContainer {
+.imageContainer {
     box-sizing: border-box;
-    /* border: 5px solid red; */
-    /* padding: 3px; */
-    /* margin-top: 280px; */
-    /* height: 350px; */
+    /* border: 5px solid white; */
     display: inline-flex;
     padding: 5px;
     padding-top: 50px;
+    justify-content: center; /* Centering Horizantly */
+    align-items: center;
 }
 
 .btn {

@@ -7,15 +7,28 @@ import { ApiService } from 'src/app/services/api.service';
   styleUrls: ['./get-titles.component.css']
 })
 export class GetTitlesComponent implements OnInit {
-  title: string = '';
+  tvTitles: any = [];
+  movieTitles: any = [];
 
-  constructor(private getTopImages: ApiService) { }
+  constructor(private getTopTitles: ApiService) { }
 
-  getTitles() {
-    
+  // Interacts with ApiService to retrieve top TV shows of the day's titles.
+  getTvTitles() {
+    this.getTopTitles.getTopTvTodayTitles().subscribe((results) => {
+      this.tvTitles = results
+    })
+  }
+
+  // Interacts with ApiService to retrieve top movies of the day's titles.
+  getMovieTitles() {
+    this.getTopTitles.getTopMoviesTodayTitles().subscribe((results) => {
+      this.movieTitles = results
+    })
   }
 
   ngOnInit(): void {
+    this.getTvTitles();
+    this.getMovieTitles();
   }
 
 }
