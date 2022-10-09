@@ -1,3 +1,19 @@
 .m {
     margin-top: 200px;
 }
+
+h3 {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    width: 400px;
+    height: 35px;
+    font-size: 17px;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
