@@ -30,7 +30,7 @@ export class ApiService {
     return this.http.get('http://localhost:5000/topMoviesTodayImages');
   }
 
-  // API call to backend to send email using nodemailer npm library.
+  // API call to backend to allow user to send email using nodemailer npm library.
   sendEmail(obj: any): Observable<Email> {
     return this.http.post<Email>('http://localhost:5000/sendEmail', obj);
   }
