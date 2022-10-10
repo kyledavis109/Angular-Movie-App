@@ -28,3 +28,8 @@
     flex: 2;
     height: 20px;
   }
+
+  .btn-block {
+    color: white;
+    background-color: green;
+}

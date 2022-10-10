@@ -6,7 +6,7 @@
         type="text"
         name="recipient"
         id="recipient"
-        placeholder="Add Recipient"
+        placeholder="Enter Your Email Address."
         formControlName="emailAddress"
         required
       />
@@ -25,7 +25,7 @@
         type="text"
         name="subject"
         id="subject"
-        placeholder="Specify Message Subject"
+        placeholder="Specify Email Subject"
         formControlName="emailSubject"
         required
       />
@@ -57,5 +57,5 @@
         </p> -->
       </div>
     </div>
-    <input type="submit" value="Send" class="btn btn-block" [disabled]="form.invalid" />
+    <input type="submit" value="Send" class="btn-block" [disabled]="form.invalid" />
   </form>
