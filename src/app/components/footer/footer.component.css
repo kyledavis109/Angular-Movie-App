@@ -75,6 +75,10 @@ section {
 	margin: 0;
 }
 
+a:hover {
+	color: purple;
+}
+
 /* Footer social icons */
 
 .footer-distributed .footer-icons{
