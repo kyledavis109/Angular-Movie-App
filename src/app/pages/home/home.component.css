@@ -9,11 +9,12 @@ h3 {
     align-items: center;
 }
 
-.input {
+.inputBox {
     width: 400px;
     height: 35px;
     font-size: 17px;
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 430px; */
 }

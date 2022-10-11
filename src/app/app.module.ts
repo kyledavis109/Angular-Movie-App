@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -14,6 +14,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { GetImagesComponent } from './components/get-images/get-images.component';
 import { EmailComponent } from './components/email/email.component';
 import { GetTitlesComponent } from './components/get-titles/get-titles.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
+import { LoadingInterceptor } from './interceptors/loading.interceptor';
 
 // Page routes.
 const appRoutes: Routes = [
@@ -36,7 +38,8 @@ const appRoutes: Routes = [
     HeaderComponent,
     GetImagesComponent,
     EmailComponent,
-    GetTitlesComponent
+    GetTitlesComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +48,9 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes, { enableTracing: true })
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
