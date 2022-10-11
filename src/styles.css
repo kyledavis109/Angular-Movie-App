@@ -21,8 +21,13 @@ body {
     display: inline-flex;
     padding: 5px;
     padding-top: 50px;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     /* align-items: center; */
-    /* float: center; */
+    float: center;
 }
 
 .btn {
