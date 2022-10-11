@@ -16,13 +16,13 @@ body {
 }
 
 .imageContainer {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     /* border: 5px solid white; */
     display: inline-flex;
     padding: 5px;
     padding-top: 50px;
-    justify-content: center; /* Centering Horizantly */
-    align-items: center;
+    /* align-items: center; */
+    /* float: center; */
 }
 
 .btn {

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-get-titles',
@@ -10,7 +11,7 @@ export class GetTitlesComponent implements OnInit {
   tvTitles: any = [];
   movieTitles: any = [];
 
-  constructor(private getTopTitles: ApiService) { }
+  constructor(private getTopTitles: ApiService, private router: Router) { }
 
   // Interacts with ApiService to retrieve top TV shows of the day's titles.
   getTvTitles() {
@@ -24,6 +25,10 @@ export class GetTitlesComponent implements OnInit {
     this.getTopTitles.getTopMoviesTodayTitles().subscribe((results) => {
       this.movieTitles = results
     })
+  }
+
+  hasRoute(route: string) {
+    return this.router.url === route;
   }
 
   ngOnInit(): void {

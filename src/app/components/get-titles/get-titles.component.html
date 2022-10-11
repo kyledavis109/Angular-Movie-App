@@ -1,6 +1,6 @@
 <div class="titleContainer" *ngFor="let title of tvTitles">
 
-    <ng-template>
+    <ng-template [ngIf]="hasRoute('/topTvToday')">
         
         <p>{{ title }}</p>
 
@@ -10,7 +10,7 @@
 
 <div class="titleContainer" *ngFor="let title of movieTitles">
 
-    <ng-template>
+    <ng-template [ngIf]="hasRoute('/topMoviesToday')">
         
         <p>{{ title }}</p>
 

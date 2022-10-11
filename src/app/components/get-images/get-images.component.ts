@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./get-images.component.css']
 })
 export class GetImagesComponent implements OnInit {
-  imageUrl: string = 'https://image.tmdb.org/t/p/w154';
+  imageUrl: string = 'https://image.tmdb.org/t/p/w185';
   movieImages: any = [];
   tvImages: any = [];
   // topTvToday: string = 'Top TV Shows Today';
