@@ -13,9 +13,9 @@ import { TopMoviesTodayComponent } from './pages/top-movies-today/top-movies-tod
 import { HeaderComponent } from './components/header/header.component';
 import { GetImagesComponent } from './components/get-images/get-images.component';
 import { EmailComponent } from './components/email/email.component';
-import { GetTitlesComponent } from './components/get-titles/get-titles.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { LoadingInterceptor } from './interceptors/loading.interceptor';
+import { MovieDisplayComponent } from './components/movie-display/movie-display.component';
 
 // Page routes.
 const appRoutes: Routes = [
@@ -38,8 +38,8 @@ const appRoutes: Routes = [
     HeaderComponent,
     GetImagesComponent,
     EmailComponent,
-    GetTitlesComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    MovieDisplayComponent
   ],
   imports: [
     BrowserModule,
