@@ -19,7 +19,7 @@ export class GetImagesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getTopImages.getTopMoviesTodayImages().subscribe((movies: any) => this.movies = movies);
+    this.getTopImages.getTopMoviesToday().subscribe((movies: any) => this.movies = movies);
   }
 
 }
