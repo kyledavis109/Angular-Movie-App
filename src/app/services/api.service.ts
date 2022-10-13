@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, Subject } from 'rxjs';
 import { Email } from '../Interfaces/email';
+import { Movies } from '../Interfaces/movies';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +10,10 @@ import { Email } from '../Interfaces/email';
 export class ApiService {
 
   constructor(private http: HttpClient) { }
+
+  getMovies(): Observable<Movies[]> {
+    return this.http.get<Movies[]>('http://localhost:5000/topMoviesTodayImages')
+  }
 
   // API call to backend to retrieve top TV shows of the day's titles.
   getTopTvTodayTitles() {

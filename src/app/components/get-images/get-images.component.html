@@ -8,23 +8,22 @@
   </div>
 <br> -->
 
-<div class="imageContainer" *ngFor="let image of tvImages">
+<!-- <div class="imageContainer" *ngFor="let image of tvImages">
 
   <ng-template [ngIf]="hasRoute('/topTvToday')">
 
-    <img src="{{ imageUrl + image.poster_path }}">
-    <div class="topTxt"><app-get-titles></app-get-titles></div>
+    <img src="{{ imageUrl + image.poster_path }}"> -->
+    <!-- <p class="topTxt" *ngFor="let tv of tvTitles">{{ tv.name }}</p> -->
 
-  </ng-template>
+  <!-- </ng-template>
 
-</div>
+</div> -->
 
-<div class="imageContainer" *ngFor="let image of movieImages">
+<div class="imageContainer" *ngFor="let movie of movies">
 
   <ng-template [ngIf]="hasRoute('/topMoviesToday')">
 
-    <img src="{{ imageUrl + image.poster_path }}">
-    <div class="topTxt"><app-get-titles></app-get-titles></div>
+    <app-movie-display [id]="movie.id" [title]="movie.title" [imageUrl]="imageUrl + movie.poster_path"></app-movie-display>
 
   </ng-template>
   

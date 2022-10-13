@@ -8,15 +8,3 @@ h3 {
 img {
     border: 2px solid white
 }
-
-.topTxt {
-    position: absolute;
-    display: none;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 0%);
-  }
-
-  .imageContainer:hover .topTxt {
-    display: block;
-  }
