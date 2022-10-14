@@ -1,13 +1,12 @@
-<!-- <div class="imageContainer" *ngFor="let image of tvImages">
+<div class="imageContainer" *ngFor="let tv of tvShows">
 
   <ng-template [ngIf]="hasRoute('/topTvToday')">
 
-    <img src="{{ imageUrl + image.poster_path }}"> -->
-    <!-- <p class="topTxt" *ngFor="let tv of tvTitles">{{ tv.name }}</p> -->
+    <app-movie-display [id]="tv.id" [title]="tv.name" [imageUrl]="imageUrl + tv.poster_path"></app-movie-display>
 
-  <!-- </ng-template>
+  </ng-template>
 
-</div> -->
+</div>
 
 <div class="imageContainer" *ngFor="let movie of movies">
 
