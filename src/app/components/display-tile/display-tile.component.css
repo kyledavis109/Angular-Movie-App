@@ -1,39 +1,4 @@
-a {
-    color: white;
-    font-size: 20px;
-}
-
-.img_img {
-    border: 2px solid black;
-    border-radius: 5%;
-    /* height: 100%;
-    width: 100%; */
-}
-
-.img_container {
-    display: flex;
-    padding: 5px;
-    padding-top: 50px;
-}
-
-.container {
-    position: relative;
-    text-align: center;
-}
-
-.topTxt {
-    position: absolute;
-    display: none;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 0%);
-  }
-
-  .container:hover .topTxt {
-  display: block;
-}
-
-/* 
+/*  
 .img_group {
     display: flex;
     justify-content: center;
