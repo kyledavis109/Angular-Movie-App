@@ -11,11 +11,11 @@ import { FooterComponent } from './components/footer/footer.component';
 import { TopTvTodayComponent } from './pages/top-tv-today/top-tv-today.component';
 import { TopMoviesTodayComponent } from './pages/top-movies-today/top-movies-today.component';
 import { HeaderComponent } from './components/header/header.component';
-import { GetImagesComponent } from './components/get-images/get-images.component';
 import { EmailComponent } from './components/email/email.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { LoadingInterceptor } from './interceptors/loading.interceptor';
-import { MovieDisplayComponent } from './components/movie-display/movie-display.component';
+import { DisplayTileComponent } from './components/display-tile/display-tile.component';
+import { GetDataComponent } from './components/get-data/get-data.component';
 
 // Page routes.
 const appRoutes: Routes = [
@@ -36,10 +36,10 @@ const appRoutes: Routes = [
     TopTvTodayComponent,
     TopMoviesTodayComponent,
     HeaderComponent,
-    GetImagesComponent,
     EmailComponent,
     SpinnerComponent,
-    MovieDisplayComponent
+    DisplayTileComponent,
+    GetDataComponent
   ],
   imports: [
     BrowserModule,
