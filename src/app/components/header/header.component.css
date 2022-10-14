@@ -13,7 +13,7 @@ body {
     opacity: 0.8;
     /*Opacity end*/
     color: white;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
