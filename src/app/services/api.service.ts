@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, Subject } from 'rxjs';
 import { Email } from '../Interfaces/email';
 import { Movies } from '../Interfaces/movies';
+import { TV } from '../Interfaces/tv';
 
 @Injectable({
   providedIn: 'root'
@@ -16,10 +17,10 @@ export class ApiService {
     return this.http.get<Movies[]>('http://localhost:5000/topMoviesToday')
   }
 
-  // API call to backend to retrieve top TV shows of the day's titles.
-  // getTopTvTodayTitles() {
-  //   return this.http.get('http://localhost:5000/topTvTodayTitles');
-  // }
+  // API call to backend to retrieve top TV shows of the day's data.
+  getTopTvToday(): Observable<TV[]> {
+    return this.http.get<TV[]>('http://localhost:5000/topTvToday');
+  }
 
   // API call to backend to allow user to send email using nodemailer npm library.
   sendEmail(obj: any): Observable<Email> {
