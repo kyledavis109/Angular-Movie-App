@@ -3,11 +3,11 @@ p {
     font-size: 10px;
 }
 
-img {
+.img_img {
     border: 2px solid white;
 }
 
-.img__container {
+.img_container {
     display: inline-flex;
     padding: 5px;
     padding-top: 50px;
