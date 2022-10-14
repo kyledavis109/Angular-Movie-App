@@ -1,23 +1,26 @@
-p {
+a {
     color: white;
     font-size: 10px;
 }
 
 .img_img {
-    border: 2px solid white;
+    border: 2px solid black;
+    border-radius: 5%;
+    /* height: 100%;
+    width: 100%; */
 }
 
 .img_container {
-    display: inline-flex;
+    display: flex;
     padding: 5px;
     padding-top: 50px;
 }
 
 /* 
-.img__container > p {
+div > p {
     display: none;
 }
 
-.img__img:hover +  p {
+div:hover +  p {
     display: block;
 } */
