@@ -15,22 +15,6 @@ body {
     margin:0;
 }
 
-.imageContainer {
-    /* box-sizing: border-box; */
-    /* border: 5px solid white; */
-    display: inline-flex;
-    padding: 5px;
-    padding-top: 50px;
-    /* display: flex;
-    flex-direction: column; */
-    /* justify-content: center; */
-    /* align-items: center;
-    /* text-align: center;
-    position: relative; */
-    /* align-items: center; */
-    /* float: center; */
-}
-
 .btn {
     display: inline-block;
     background: #000;

@@ -1,0 +1,23 @@
+p {
+    color: white;
+    font-size: 10px;
+}
+
+img {
+    border: 2px solid white;
+}
+
+.img__container {
+    display: inline-flex;
+    padding: 5px;
+    padding-top: 50px;
+}
+
+/* 
+.img__container > p {
+    display: none;
+}
+
+.img__img:hover +  p {
+    display: block;
+} */
