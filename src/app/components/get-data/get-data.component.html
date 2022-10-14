@@ -1,19 +1,21 @@
-<div *ngFor="let tv of tvShows">
+<ng-template *ngFor="let tv of tvShows" [ngIf]="hasRoute('/topTvToday')">
 
-    <ng-template [ngIf]="hasRoute('/topTvToday')">
+    <div class="container">
 
         <app-display-tile [id]="tv.id" [title]="tv.name" [imageUrl]="imageUrl + tv.poster_path"></app-display-tile>
+        
+    </div>
 
-    </ng-template>
+</ng-template>
 
-</div>
 
-<div *ngFor="let movie of movies">
+<ng-template *ngFor="let movie of movies" [ngIf]="hasRoute('/topMoviesToday')">
 
-    <ng-template [ngIf]="hasRoute('/topMoviesToday')">
-
+    <div class="container">
+        
         <app-display-tile [id]="movie.id" [title]="movie.title" [imageUrl]="imageUrl + movie.poster_path"></app-display-tile>
 
-    </ng-template>
+    </div>
 
-</div>
+</ng-template>
+

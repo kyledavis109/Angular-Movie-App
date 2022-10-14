@@ -1,7 +1,26 @@
-<div class="img_container">
+<!-- <div class="img_container">
   
-  <img class="img_img" [src]="imageUrl" alt="Media Images">
+  <div class="container">
+    <img class="img_img" [src]="imageUrl" alt="Media Images">
+    <a class="topTxt" href="#">{{ title }}</a>
+  </div>
 
-  <a href="#">{{ title }}</a>
-    
+</div> -->
+
+<!-- <div class="img_group">
+  <img class="img" [src]="imageUrl" alt="Media Images">
+  <div class='img_hover img_hover--blur'>
+    <div class='img_description'>
+      <h1 class="name">{{ title }}</h1>
+    </div>
+  </div>
+</div> -->
+
+<div class="image">
+  <img class="image_img" [src]="imageUrl" alt="Media Images">
+  <div class="image_overlay image_overlay--primary">
+    <!-- <div class="image_title"> -->
+      <p class="image_description">{{ title }}</p>
+    <!-- </div> -->
+  </div>
 </div>
