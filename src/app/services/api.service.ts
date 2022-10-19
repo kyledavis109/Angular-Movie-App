@@ -4,7 +4,7 @@ import { Observable, Subject } from 'rxjs';
 import { Email } from '../Interfaces/email';
 import { Movies } from '../Interfaces/movies';
 import { TV } from '../Interfaces/tv';
-import { SearchParameters } from '../Interfaces/search';
+import { SearchResults } from '../Interfaces/search';
 
 @Injectable({
   providedIn: 'root'
@@ -18,8 +18,8 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  searchMovies(searchString: string): Observable<any> {
-    return this.http.get('http://localhost:5000/search');
+  searchMovies(searchString: string): Observable<SearchResults[]> {
+    return this.http.get<SearchResults[]>('http://localhost:5000/search');
   }
 
   // API call to backend to retrieve top movies of the day's data.

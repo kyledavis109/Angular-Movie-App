@@ -1,13 +1,9 @@
-<form *ngIf="showSearchForm" class="add-form" [formGroup]="infoForm" (ngSubmit)="sendSearchResults()" #form="ngForm">
-    <div>
-        <label for="search">Search</label>
-        <input
-        type="text"
-        name="search"
-        id="search"
-        placeholder="search"
-        required
-        />
+<ng-template *ngFor="let result of searchResults" [ngIf]="searchResults">
+
+    <div class="container">
+
+        <app-display-tile [id]="result.id" [title]="result.title" [imageUrl]="imageBaseUrl + result.poster_path"></app-display-tile>
+        
     </div>
-    <input type="submit" value="Send" class="btn-block" [disabled]="form.invalid" />
-</form>
+
+</ng-template>
