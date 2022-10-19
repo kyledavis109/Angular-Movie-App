@@ -10,7 +10,7 @@ import { TV } from 'src/app/Interfaces/tv';
   styleUrls: ['./get-data.component.css']
 })
 export class GetDataComponent implements OnInit {
-  imageUrl: string = 'https://image.tmdb.org/t/p/w185';
+  imageBaseUrl: string = 'https://image.tmdb.org/t/p/w185';
   movies: Movies[] = [];
   tvShows: TV[] = [];
 

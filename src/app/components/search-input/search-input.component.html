@@ -1,0 +1,13 @@
+<form *ngIf="showSearchForm" class="add-form" [formGroup]="infoForm" (ngSubmit)="sendSearchResults()" #form="ngForm">
+    <div>
+        <label for="search">Search</label>
+        <input
+        type="text"
+        name="search"
+        id="search"
+        placeholder="search"
+        required
+        />
+    </div>
+    <input type="submit" value="Send" class="btn-block" [disabled]="form.invalid" />
+</form>

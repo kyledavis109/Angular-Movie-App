@@ -36,17 +36,17 @@ export class EmailComponent implements OnInit {
 
   sendMail() {
     console.log(this.infoForm.value);
-    this.subscription = this.send.sendEmail(this.infoForm.value).
-    subscribe({
-      next(data: any) {
-        let msg = data['message'];
-        alert(msg);
-        console.log(data, "success");
-      },
-      error(error) {
-        console.error(error, 'error');
-      }
-    });
+    this.subscription = this.send.sendEmail(this.infoForm.value)
+      .subscribe({
+        next(data: any) {
+          let msg = data['message'];
+          alert(msg);
+          console.log(data, "success");
+        },
+        error(error) {
+          console.error(error, 'error');
+        }
+      });
   }
 
   ngOnInit(): void {

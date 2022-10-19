@@ -2,7 +2,7 @@
 
     <div class="container">
 
-        <app-display-tile [id]="tv.id" [title]="tv.name" [imageUrl]="imageUrl + tv.poster_path"></app-display-tile>
+        <app-display-tile [id]="tv.id" [title]="tv.name" [imageUrl]="imageBaseUrl + tv.poster_path"></app-display-tile>
         
     </div>
 
@@ -13,7 +13,7 @@
 
     <div class="container">
         
-        <app-display-tile [id]="movie.id" [title]="movie.title" [imageUrl]="imageUrl + movie.poster_path"></app-display-tile>
+        <app-display-tile [id]="movie.id" [title]="movie.title" [imageUrl]="imageBaseUrl + movie.poster_path"></app-display-tile>
 
     </div>
 
