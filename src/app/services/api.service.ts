@@ -10,40 +10,21 @@ import { SearchParameters } from '../Interfaces/search';
   providedIn: 'root'
 })
 export class ApiService {
-  searchParameters!: HttpParams;
-  addParams: any = '';
+
+  baseUrl!: string;
+  apiKey!: string;
+  language!: string;
+  region!: string;
 
   constructor(private http: HttpClient) { }
 
-  searchMovie(queryParams: SearchParameters): Observable<Object> {
-    this.searchParameters = new HttpParams();
-    this.addParams(queryParams);
-    return this.http.get('http://localhost:5000/search')
-  }
-
-
-  addParameters(queryParams: SearchParameters) {
-    // this.searchParameters = this.searchParameters.set('api_key', config['api-key']);
-    this.searchParameters = this.searchParameters.set('language', 'en-US');
-    this.verifyAndAddToParams('query', queryParams.searchQuery);
-    this.verifyAndAddToParams('include_adult', queryParams.adult);
-    this.verifyAndAddToParams('page', queryParams.page);
-  }
-
-  private verifyAndAddToParams(key: any, value: any)
-  {
-    if (typeof value !== 'undefined') {
-      if (typeof value !== 'string') {
-        this.searchParameters = this.searchParameters.set(key, String(value));
-      } else {
-        this.searchParameters = this.searchParameters.set(key, value);
-      }
-    }
+  searchMovies(searchString: string): Observable<any> {
+    return this.http.get('http://localhost:5000/search');
   }
 
   // API call to backend to retrieve top movies of the day's data.
   getTopMoviesToday(): Observable<Movies[]> {
-    return this.http.get<Movies[]>('http://localhost:5000/topMoviesToday')
+    return this.http.get<Movies[]>('http://localhost:5000/topMoviesToday');
   }
 
   // API call to backend to retrieve top TV shows of the day's data.
