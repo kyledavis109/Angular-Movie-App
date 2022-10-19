@@ -17,7 +17,6 @@ import { LoadingInterceptor } from './interceptors/loading.interceptor';
 import { DisplayTileComponent } from './components/display-tile/display-tile.component';
 import { GetDataComponent } from './components/get-data/get-data.component';
 import { SearchInputComponent } from './components/search-input/search-input.component';
-import { SearchItemComponent } from './components/search-item/search-item.component';
 
 // Page routes.
 const appRoutes: Routes = [
@@ -43,7 +42,6 @@ const appRoutes: Routes = [
     DisplayTileComponent,
     GetDataComponent,
     SearchInputComponent,
-    SearchItemComponent
   ],
   imports: [
     BrowserModule,
