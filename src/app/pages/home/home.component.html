@@ -7,11 +7,9 @@
         </div>
     </div>
     <br>
-    <div class="center-screen">
-
-        <input class="inputBox" placeholder="Search...">
-        <!-- <app-button color="green" text="search" (btnClick)="searchInput()"></app-button> -->
-      <app-search-input></app-search-input>
-    </div>
-    <!-- <app-button text="Search" color="green"></app-button> -->
+    <!-- <div class="center-screen">
+        <input class="inputBox" placeholder="Search..." [(ngModel)]="searchStr" name="searchStr" type="search" (keyup.enter)="searchMovies()">
+        <app-button color="green" text="search" (btnClick)="searchMovies()"></app-button>
+        <p>{{ searchStr }}</p>
+    </div> -->
 </div>

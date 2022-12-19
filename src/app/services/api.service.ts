@@ -1,26 +1,29 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable, Subject } from 'rxjs';
 import { Email } from '../Interfaces/email';
 import { Movies } from '../Interfaces/movies';
 import { TV } from '../Interfaces/tv';
-import { SearchResults } from '../Interfaces/search';
+// import { SearchResults } from '../Interfaces/search';
+const headers = new HttpHeaders().set('Content-Type', 'application/X-www-form-urlencoded');
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
-
-  baseUrl!: string;
-  apiKey!: string;
-  language!: string;
-  region!: string;
+  public result: any;
 
   constructor(private http: HttpClient) { }
 
-  searchMovies(searchString: string): Observable<SearchResults[]> {
-    return this.http.get<SearchResults[]>('http://localhost:5000/search');
-  }
+  // search(item: string): Observable<any> {
+  //   let searchterm = `query=${item}`;
+  //   try {
+  //     this.result = this.http.post('/search', searchterm, {headers});
+  //     return this.result;
+  //   } catch (e) {
+  //     // console.log(e, 'error')
+  //   }
+  // }
 
   // API call to backend to retrieve top movies of the day's data.
   getTopMoviesToday(): Observable<Movies[]> {
