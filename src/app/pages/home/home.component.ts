@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SearchResults } from 'src/app/Interfaces/search';
+// import { SearchResults } from 'src/app/Interfaces/search';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
 
@@ -9,7 +9,7 @@ import { ApiService } from 'src/app/services/api.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  searchResults: SearchResults[] = [];
+  // searchResults: SearchResults[] = [];
   searchRes: any;
   searchStr!: string;
   totalResults!: any;
